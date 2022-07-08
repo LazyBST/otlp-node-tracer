@@ -1,0 +1,34 @@
+{
+  "name": "otel-node-tracer",
+  "version": "1.0.0",
+  "description": "A wrapper implementation to auto instrument a node js application using opentelemetry",
+  "main": "tracing.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LazyBST/otlp-node-tracer.git"
+  },
+  "keywords": [
+    "opentelemetry",
+    "autoinstrumentation",
+    "node",
+    "otlp"
+  ],
+  "author": "Ayush Arora (lazybst)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LazyBST/otlp-node-tracer/issues"
+  },
+  "homepage": "https://github.com/LazyBST/otlp-node-tracer#readme",
+  "dependencies": {
+    "@opentelemetry/auto-instrumentations-node": "^0.31.0",
+    "@opentelemetry/exporter-trace-otlp-grpc": "^0.30.0",
+    "@opentelemetry/resources": "^1.4.0",
+    "@opentelemetry/sdk-node": "^0.30.0",
+    "@opentelemetry/sdk-trace-base": "^1.4.0",
+    "@opentelemetry/semantic-conventions": "^1.4.0",
+    "dotenv": "^16.0.1"
+  }
+}
