@@ -22,7 +22,7 @@ const SERVICE_NAME = process.env.SERVICE_TRACING_NAME;
 
 if (!SERVICE_NAME) {
   throw new Error(
-    "No service name specified in environment, Please add SERVICE_NAME in the .env"
+    "No service name specified in environment, Please pass SERVICE_TRACING_NAME as env"
   );
 }
 
