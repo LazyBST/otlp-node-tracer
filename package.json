@@ -1,5 +1,5 @@
 {
-  "name": "otel-node-tracer",
+  "name": "otlp-node-tracer",
   "version": "1.0.0",
   "description": "A wrapper implementation to auto instrument a node js application using opentelemetry",
   "main": "tracing.js",
