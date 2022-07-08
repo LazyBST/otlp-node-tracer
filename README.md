@@ -7,14 +7,12 @@ Edit the script in package json which is used to start the application, in most 
 
 ```
 "start": "node index.js"
-
 ```
 
 Replace the above with
 
 ```
 "start": "node -r ./node_modules/otlp-node-tracer/OTLP_TRACER.js index.js"
-
 ```
 
 The above will automatically start tracing the node js application using OTLP trace exporter.
