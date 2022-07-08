@@ -18,7 +18,7 @@ const {
   getNodeAutoInstrumentations,
 } = require("@opentelemetry/auto-instrumentations-node");
 
-const SERVICE_NAME = process.env.SERVICE_NAME;
+const SERVICE_NAME = process.env.SERVICE_TRACING_NAME;
 
 if (!SERVICE_NAME) {
   throw new Error(
