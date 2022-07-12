@@ -3,8 +3,10 @@ A wrapper implementation to auto instrument a distributed Node JS application us
 
 
 # ENV required
+TRACE_COLLECTOR_ENDPOINT should contain the endpoint of the deployed collector. Default is as below.
 ```
 SERVICE_TRACING_NAME="testing-service-name"
+TRACE_COLLECTOR_ENDPOINT=http://localhost:4317
 ```
 
 # How to start tracing
