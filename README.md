@@ -2,6 +2,11 @@
 A wrapper implementation to auto instrument a distributed Node JS application using Opentelemetry.
 
 
+# ENV required
+```
+SERVICE_TRACING_NAME="testing-service-name"
+```
+
 # How to start tracing
 Edit the script in package json which is used to start the application, in most cases it will a start script something like below
 
