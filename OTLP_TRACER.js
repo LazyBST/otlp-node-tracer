@@ -19,6 +19,7 @@ const {
 } = require("@opentelemetry/auto-instrumentations-node");
 
 const SERVICE_NAME = process.env.SERVICE_TRACING_NAME;
+const COLLECTOR_ENDPOINT = process.env.TRACE_COLLECTOR_ENDPOINT;
 
 if (!SERVICE_NAME) {
   throw new Error(
@@ -26,7 +27,15 @@ if (!SERVICE_NAME) {
   );
 }
 
-const exporter = new OTLPTraceExporter();
+if (!COLLECTOR_ENDPOINT) {
+  throw new Error(
+    "No collector endpoint specified in environment, Please pass TRACE_COLLECTOR_ENDPOINT as env"
+  );
+}
+
+const exporter = new OTLPTraceExporter({
+  url: COLLECTOR_ENDPOINT,
+});
 
 const provider = new BasicTracerProvider({
   resource: new Resource({
